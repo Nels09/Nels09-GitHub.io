@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Tribute</title>
+	</head>
+
+	<style>
+		.fill-color {
+			color: brown;
+		}
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #e1eef6;
+			font-family: "Lora", serif;
+		}
+
+		header {
+			text-align: center;
+			color: #000;
+		}
+
+		.h1,
+		.intern {
+			font-weight: 500;
+		}
+
+		.intern {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		blockquote {
+			padding: 1em;
+			width: max-content;
+			margin: auto;
+			box-shadow: 0px 0px 15px #adb6bb66;
+			line-height: 2em;
+			border-left: 3px solid brown;
+			border-radius: 5px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.quote-author {
+			margin-left: 0.3em;
+		}
+
+		.tribute-section {
+			padding: 2em;
+			margin-top: 2em;
+		}
+
+		.tribute-section > img {
+			height: 250px;
+			width: 250px;
+			border-radius: 50%;
+			object-fit: fill;
+			margin-right: 2em;
+			float: left;
+			shape-outside: circle();
+			box-shadow: 1px 1px 10px #0003048a;
+		}
+
+		.tribute-section > article > p {
+			line-height: 2em;
+		}
+
+		footer {
+			margin-bottom: 3em;
+		}
+
+		footer h2 {
+			font-weight: 500;
+			text-align: center;
+			margin-bottom: 1.5em;
+		}
+
+		form {
+			width: 70%;
+			margin: auto;
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: 4%;
+		}
+
+		.form-control {
+			padding: 1.2em;
+			border-radius: 5px;
+			border: 1px solid #adb6bb66;
+			outline: none !important;
+			width: 48%;
+			display: block;
+			margin-bottom: 2em;
+			flex-grow: 1;
+		}
+
+		@media screen and (max-width: 768px) {
+			form {
+				width: 90%;
+			}
+		}
+
+		@media screen and (max-width: 520px) {
+			blockquote {
+				width: auto;
+			}
+			form {
+				display: block;
+			}
+			.form-control {
+				width: 100%;
+			}
+			.tribute-section {
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+			.tribute-section > img {
+				height: 200px;
+				width: 200px;
+				float: none;
+				margin: auto;
+				display: block;
+			}
+			.hyphen {
+				display: none;
+			}
+		}
+	</style>
+
+	<body>
+		<header>
+			<h1 class="h1">Side Hustle 3.0</h1>
+			<h3 class="intern fill-color">
+				<span>Iwuoha Nelly Ijeoma </span>
+				<span class="hyphen">-</span>
+				<span>SH-IT-08340</span>
+			</h3>
+			<blockquote>
+				<span>Turn your wounds into wisdom</span>
+				<span class="quote-author"> - Oprah Winfrey</span>
+			</blockquote>
+		</header>
+
+		<section class="tribute-section">
+			<img src="./img.jpeg" alt="" />
+			<article>
+				<h3 class="fill-color">Dear Dad,</h3>
+				<p>
+					I am yet to see a man stronger than you, the level of strength you
+					exude is surprising. I know you are a man and, it is said that men
+					ought to bear pain as a show of strength but, your resilience is next
+					to none. You are my role model, each time I look at you, I want to do
+					more, I want to be better. You have seen me through a lot of hurdles
+					in life, you have never complained. Saying thank you for all you do
+					will never be enough appreciation. Remember when I went under the
+					knife? You had gone under the knife few days before and, you were
+					nursing your wound but, you had to go to work just to ensure you raise
+					money for my bills. You were in pain, I could see it but, what
+					mattered to you was my life.
+				</p>
+
+				<p>
+					You went hungry severally, you had sleepless nights, just so I could
+					go to school, so I could become a better person, only God can reward
+					you. Sometimes you want to give up but, because of your love for me
+					and the family as a whole, you find the strength to carry on.
+				</p>
+
+				<p>
+					This tribute is for you, you are my hero, you are the best. This is
+					for the world to see and know that I have the best father in the
+					world. I love you now and always.
+				</p>
+			</article>
+		</section>
+
+		<footer>
+			<h2 class="fill-color">Fill in your details</h2>
+			<form>
+				<input type="text" class="form-control" placeholder="Full Name" />
+				<input type="text" class="form-control" placeholder="Phone Number" />
+				<input type="text" class="form-control" placeholder="Email Address" />
+				<input type="date" class="form-control" placeholder="Date" />
+				<select class="form-control">
+					<option value="">Sex</option>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+				</select>
+			</form>
+		</footer>
+	</body>
+</html>
