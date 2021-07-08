@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Counter</title>
+	</head>
+	<style>
+		body {
+			font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			background-color: #b2946a;
+			display: flex;
+		}
+		div {
+			width: 300px;
+			aspect-ratio: 1 /1;
+			margin: auto;
+			position: fixed;
+			inset: 0;
+			text-align: center;
+			border: 2px solid #fff;
+			color: #fff;
+			padding: 3em;
+			box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.419);
+		}
+
+		#counter-display {
+			color: green;
+			font-weight: 600;
+			font-size: 70px;
+		}
+		button {
+			border: none !important;
+			outline: none !important;
+			border-radius: 5px;
+			padding: 1em;
+			background-color: #0d2c54;
+			color: #fff;
+			box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.419);
+			display: block;
+			font-size: 1em;
+			text-transform: uppercase;
+			margin: 1em auto;
+
+		}
+	</style>
+	<body>
+		<div>
+			<h1>Counter</h1>
+			<section id="counter-display"></section>
+
+			<button id="increase" onclick="appCounter('increase')">
+				Add Count
+			</button>
+			<button id="decrease" onclick="appCounter('decrease')">
+				Lower Count
+			</button>
+		</div>
+
+		<script>
+			// * initialize the counter value to a number
+			let counter = 0;
+			let counter_display = document.querySelector("#counter-display");
+			// * display the initial counter number in the document
+			counter_display.innerHTML = counter;
+			// * set a click event listener  to perform actions on the buttons
+			function appCounter(action) {
+				if (action == "increase") {
+					if (counter == 50) return;
+					counter++;
+					counter_display.innerHTML = counter;
+				}
+				if (action == "decrease") {
+					if (counter == 0) return;
+					counter--;
+					counter_display.innerHTML = counter;
+				}
+			}
+		</script>
+	</body>
+</html>
